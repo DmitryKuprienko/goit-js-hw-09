@@ -18,13 +18,17 @@ function changeColor() {
   interval = setInterval(() => {
     refs.bodyRef.style.backgroundColor = getRandomHexColor();
   }, 1000);
-  refs.buttonStart.removeEventListener('click', changeColor);
-
+  // refs.buttonStart.removeEventListener('click', changeColor);
+  console.log(refs.buttonStart)
+  // refs.buttonStart.disabled =  "true"
 }
 
 function stopChange() {
   clearInterval(interval);
+  // refs.buttonStart.disabled ="false";
   refs.buttonStart.addEventListener('click', changeColor);
+  
+  
 }
 
 function getRandomHexColor() {
