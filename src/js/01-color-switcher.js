@@ -13,21 +13,20 @@ let interval = null;
 
 refs.buttonStart.addEventListener('click', changeColor);
 refs.buttonStop.addEventListener('click', stopChange);
+refs.buttonStop.disabled = true;
 
 function changeColor() {
   interval = setInterval(() => {
     refs.bodyRef.style.backgroundColor = getRandomHexColor();
   }, 1000);
-  // refs.buttonStart.removeEventListener('click', changeColor);
-  console.log(refs.buttonStart)
-  // refs.buttonStart.disabled =  "true"
+  refs.buttonStart.disabled =  true;
+  refs.buttonStop.disabled =  false;
 }
 
 function stopChange() {
   clearInterval(interval);
-  // refs.buttonStart.disabled ="false";
-  refs.buttonStart.addEventListener('click', changeColor);
-  
+  refs.buttonStart.disabled =  false;
+  refs.buttonStop.disabled =  true;
   
 }
 
