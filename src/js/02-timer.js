@@ -1,12 +1,25 @@
 const element= x =>document.querySelector(x);
 
-console.log( element(".timer"))
+// console.log( element(".timer"))
 
-const date =Date.now();
-console.log(date)
+// const date =Date.now();
+// console.log(date)
 
-setInterval(()=>{
-    const date2=Date.now()
-    console.log(date2)
+// setTimeout(()=>{
+//     const date2=Date.now()
+//     console.log(date2)
+// }
+//     ,10000)
+const timer = {
+    const starttimer = Date.now();
+start{   
+    setInterval(()=>{
+    
+
+    console.log("час", starttimer)},1000)
+        
+   }}
+
+
+    
 }
-    ,10000)
