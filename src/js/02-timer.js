@@ -1,6 +1,6 @@
-const element= x =>document.querySelector(x);
+const element = x => document.querySelector(x);
 
-// console.log( element(".timer"))
+// console.log(element('.timer'));
 
 // const date =Date.now();
 // console.log(date)
@@ -10,3 +10,5 @@ const element= x =>document.querySelector(x);
 //     console.log(date2)
 // }
 //     ,10000)
+
+
