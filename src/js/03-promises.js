@@ -1,5 +1,7 @@
 import Notiflix from 'notiflix';
 
+
+
 const formRef = document.querySelector('.form');
 
 function createPromise(position, delay) {
@@ -11,9 +13,9 @@ function createPromise(position, delay) {
     setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
-      } else {
+      } 
         reject({ position, delay });
-      }
+      
     }, delay);
   });
 }
@@ -36,6 +38,8 @@ console.log('amountValue->',amountValue)
 
   for (let position = 1; position <= amountValue; position += 1) {
     const delay = delayValue + stepValue * (position - 1);
+    console.log('position ->',position)
+    console.log('position - 1->',position - 1)
 
     createPromise(position, delay)
       .then(({ position, delay }) => {
